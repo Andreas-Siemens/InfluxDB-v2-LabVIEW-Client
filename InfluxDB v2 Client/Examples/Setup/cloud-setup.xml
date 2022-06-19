@@ -1,0 +1,69 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>20.0.1f1</Version>
+<Cluster>
+<Name>Setup Data</Name>
+<NumElts>5</NumElts>
+<Cluster>
+<Name>DataBase Data</Name>
+<NumElts>4</NumElts>
+<String>
+<Name>Api Token</Name>
+<Val>SM7dDh7lQ5an6faA405zlvnQNznWv4-vN5CccXHAK4oNr58M3V9OjnYNybvqmelKFdRliWXgRhmwqwYN7_5CBw==</Val>
+</String>
+<String>
+<Name>Organization</Name>
+<Val>influxdb@andreas-siemens.de</Val>
+</String>
+<String>
+<Name>url</Name>
+<Val>https://eu-central-1-1.aws.cloud2.influxdata.com/api/v2/</Val>
+</String>
+<String>
+<Name>Organization ID</Name>
+<Val>549bf874c5a7c7f3</Val>
+</String>
+</Cluster>
+<Cluster>
+<Name>Write Data</Name>
+<NumElts>3</NumElts>
+<String>
+<Name>Bucket</Name>
+<Val>Test1</Val>
+</String>
+<EW>
+<Name>Timestamp precision</Name>
+<Choice>Nanoseconds</Choice>
+<Choice>Microseconds</Choice>
+<Choice>Milliseconds</Choice>
+<Choice>Seconds</Choice>
+<Val>3</Val>
+</EW>
+<String>
+<Name>Line protocol</Name>
+<Val></Val>
+</String>
+</Cluster>
+<EW>
+<Name>Timestamp precision</Name>
+<Choice>Nanoseconds</Choice>
+<Choice>Microseconds</Choice>
+<Choice>Milliseconds</Choice>
+<Choice>Seconds</Choice>
+<Val>3</Val>
+</EW>
+<String>
+<Name>Measurement</Name>
+<Val>mem3</Val>
+</String>
+<String>
+<Name>Query - csv</Name>
+<Val>from(bucket: "Test1")
+  |&gt; range(start: -30m)
+  |&gt; filter(fn: (r) =&gt; r["_measurement"] == "mem3")
+  |&gt; filter(fn: (r) =&gt; r["_field"] == "cpu_temp")
+  |&gt; aggregateWindow(every: 1s, fn: last, createEmpty: false)
+  |&gt; yield(name: "last")</Val>
+</String>
+</Cluster>
+</LVData>

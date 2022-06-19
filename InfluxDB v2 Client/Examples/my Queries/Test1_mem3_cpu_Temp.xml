@@ -1,0 +1,13 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>20.0.1f1</Version>
+<String>
+<Name>Query - csv</Name>
+<Val>from(bucket: "Test1")
+  |&gt; range(start: -30m)
+  |&gt; filter(fn: (r) =&gt; r["_measurement"] == "mem3")
+  |&gt; filter(fn: (r) =&gt; r["_field"] == "cpu_temp")
+  |&gt; aggregateWindow(every: 1s, fn: last, createEmpty: false)
+  |&gt; yield(name: "last")</Val>
+</String>
+</LVData>
