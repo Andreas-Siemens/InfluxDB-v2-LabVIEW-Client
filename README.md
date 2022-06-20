@@ -23,7 +23,21 @@ The tab `Init` shows you the data which is needed for connecting to the InfluDB 
 After this click on the `Init` button to initialize the client.<p>
 With a click on `Check Auth` you can check the communication with your InfluxDB database. If all is OK the code in `HTTP Status` should show the value 200, otherwise you will see a corresponding error message.
 ## Write
-At the tab `Write` you can write data into your InfluxDB database. For doing this replace the content in the fields `Bucket` and `Measurement` with your own data. Also leave both field for timestamp precision at `Sesonds`. After this initialize the write client by clicking on the button `Init Write Data`.<p>
+At the tab `Write` you can write data into your InfluxDB database. For doing this replace the content in the fields `Bucket` and `Measurement` with your own data, or  alternatively create a bucket with the name `Test1` in your database for storing testdata. Also leave both field for timestamp precision at `Seconds`. After this initialize the write client by clicking on the button `Init Write Data`.<p>
+In the tag set `Tags` there are already 2 tags defined, but you can change them and add some more tags.<p>
+The field set consists of the array `Field Names` and the structure `Field Values`. Each entry in this structure represents a different data type:
+  
+  - cpu_temp: float type
+  - error_code: signed integer
+  - cpu_load: unsigned integer
+  - cpu_type: string
+  - cpu_busy: boolean
+  
+This programm will demonstrate the handling of writing different data types into InfluxDB. With a click on the button `Write Data` a data point with these 5 fields will be written to the database using the line protocol. With each clíck the field values will also be changed randomly, this prevents the writing of several identical values. 
+## Query
+At the tab `Query` you can read data from your FluxDB database using the Flux query language. In the field `Query` you can see already a complete query for the data you wrote before at the tab `Write`. Please make sure that the names for the bucket and the measurement are the same as you used before. With a click on the button `Query Data` the data will be read and displayed in the field `Body` in a csv format. To save this data into a file click on the button `Write csv - file`. Enable the field `with compression` for reducing transfer data's size.<p>
+With a click on the button `Write Query` you can save the content of the query field into a text file. The `Read Query` button allows you to read query from an another file.
+
 
 
 # Licence
