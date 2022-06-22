@@ -3,7 +3,7 @@
 <Version>20.0.1f1</Version>
 <Cluster>
 <Name>Setup Data</Name>
-<NumElts>5</NumElts>
+<NumElts>3</NumElts>
 <Cluster>
 <Name>DataBase Data</Name>
 <NumElts>4</NumElts>
@@ -17,7 +17,7 @@
 </String>
 <String>
 <Name>url</Name>
-<Val>http://192.168.178.12:8086/api/v2/</Val>
+<Val>http://192.168.178.12:8086</Val>
 </String>
 <String>
 <Name>Organization ID</Name>
@@ -26,7 +26,7 @@
 </Cluster>
 <Cluster>
 <Name>Write Data</Name>
-<NumElts>3</NumElts>
+<NumElts>4</NumElts>
 <String>
 <Name>Bucket</Name>
 <Val>Test1</Val>
@@ -43,19 +43,11 @@
 <Name>Line protocol</Name>
 <Val></Val>
 </String>
-</Cluster>
-<EW>
-<Name>Timestamp precision</Name>
-<Choice>Nanoseconds</Choice>
-<Choice>Microseconds</Choice>
-<Choice>Milliseconds</Choice>
-<Choice>Seconds</Choice>
-<Val>3</Val>
-</EW>
 <String>
 <Name>Measurement</Name>
 <Val>mem3</Val>
 </String>
+</Cluster>
 <String>
 <Name>Query - csv</Name>
 <Val>from(bucket: "Test1")

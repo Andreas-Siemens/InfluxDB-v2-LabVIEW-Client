@@ -28,7 +28,7 @@
 		<Item Name="Influx Command.ctl" Type="VI" URL="../Client/Influx Command.ctl"/>
 		<Item Name="InfluxDB v2.x Client.vi" Type="VI" URL="../Client/InfluxDB v2.x Client.vi"/>
 		<Item Name="Query Data.ctl" Type="VI" URL="../Client/Query Data.ctl"/>
-		<Item Name="Write Data - LP.ctl" Type="VI" URL="../Client/Write Data - LP.ctl"/>
+		<Item Name="Write Data (old).ctl" Type="VI" URL="../Client/Write Data (old).ctl"/>
 		<Item Name="Write Data.ctl" Type="VI" URL="../Client/Write Data.ctl"/>
 		<Item Name="Write Precision.ctl" Type="VI" URL="../Client/Write Precision.ctl"/>
 	</Item>
