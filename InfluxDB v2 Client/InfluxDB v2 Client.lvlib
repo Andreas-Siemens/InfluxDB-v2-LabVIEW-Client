@@ -50,16 +50,6 @@
 		<Item Name="Timestamp precision.ctl" Type="VI" URL="../Data Point/Timestamp precision.ctl"/>
 		<Item Name="to Line Protocol.vi" Type="VI" URL="../Data Point/to Line Protocol.vi"/>
 	</Item>
-	<Item Name="Examples" Type="Folder">
-		<Item Name="Setup" Type="Folder">
-			<Item Name="Read Setup.vi" Type="VI" URL="../Examples/Setup/Read Setup.vi"/>
-			<Item Name="Setup Data.ctl" Type="VI" URL="../Examples/Setup/Setup Data.ctl"/>
-			<Item Name="Write Setup.vi" Type="VI" URL="../Examples/Setup/Write Setup.vi"/>
-		</Item>
-		<Item Name="Field Values.ctl" Type="VI" URL="../Examples/Field Values.ctl"/>
-		<Item Name="Modify Test Data.vi" Type="VI" URL="../Examples/Modify Test Data.vi"/>
-		<Item Name="Test v2 Client.vi" Type="VI" URL="../Examples/Test v2 Client.vi"/>
-	</Item>
 	<Item Name="Templates" Type="Folder">
 		<Item Name="SubVi with Error Handling.vit" Type="VI" URL="../Templates/SubVi with Error Handling.vit"/>
 	</Item>
