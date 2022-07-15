@@ -50,7 +50,4 @@
 		<Item Name="Timestamp precision.ctl" Type="VI" URL="../Data Point/Timestamp precision.ctl"/>
 		<Item Name="to Line Protocol.vi" Type="VI" URL="../Data Point/to Line Protocol.vi"/>
 	</Item>
-	<Item Name="Templates" Type="Folder">
-		<Item Name="SubVi with Error Handling.vit" Type="VI" URL="../Templates/SubVi with Error Handling.vit"/>
-	</Item>
 </Library>

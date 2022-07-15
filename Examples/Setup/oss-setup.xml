@@ -1,0 +1,81 @@
+<?xml version='1.0' standalone='yes' ?>
+<LVData xmlns="http://www.ni.com/LVData">
+<Version>20.0.1f1</Version>
+<Cluster>
+<Name>Setup Data</Name>
+<NumElts>6</NumElts>
+<Cluster>
+<Name>DataBase Data</Name>
+<NumElts>4</NumElts>
+<String>
+<Name>Api Token</Name>
+<Val>abc123==</Val>
+</String>
+<String>
+<Name>Organization</Name>
+<Val>org1</Val>
+</String>
+<String>
+<Name>url</Name>
+<Val>http://192.168.178.12:8086</Val>
+</String>
+<String>
+<Name>Organization ID</Name>
+<Val></Val>
+</String>
+</Cluster>
+<String>
+<Name>Query - csv</Name>
+<Val>from(bucket: "Test1")
+  |&gt; range(start: -30m)
+  |&gt; filter(fn: (r) =&gt; r["_measurement"] == "mem3")
+  |&gt; filter(fn: (r) =&gt; r["_field"] == "cpu_temp")
+  |&gt; aggregateWindow(every: 1s, fn: last, createEmpty: false)
+  |&gt; yield(name: "last")</Val>
+</String>
+<String>
+<Name>Bucket</Name>
+<Val>Test1</Val>
+</String>
+<String>
+<Name>Measurement</Name>
+<Val>mem3</Val>
+</String>
+<EW>
+<Name>Timestamp precision</Name>
+<Choice>Nanoseconds</Choice>
+<Choice>Microseconds</Choice>
+<Choice>Milliseconds</Choice>
+<Choice>Seconds</Choice>
+<Val>3</Val>
+</EW>
+<Array>
+<Name>Tags</Name>
+<Dimsize>2</Dimsize>
+<Cluster>
+<Name>Tag</Name>
+<NumElts>2</NumElts>
+<String>
+<Name>Key</Name>
+<Val>host1</Val>
+</String>
+<String>
+<Name>Value</Name>
+<Val>myPC</Val>
+</String>
+</Cluster>
+<Cluster>
+<Name>Tag</Name>
+<NumElts>2</NumElts>
+<String>
+<Name>Key</Name>
+<Val>host2</Val>
+</String>
+<String>
+<Name>Value</Name>
+<Val>X-Server</Val>
+</String>
+</Cluster>
+</Array>
+</Cluster>
+</LVData>
